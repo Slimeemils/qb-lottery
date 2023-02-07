@@ -2,7 +2,7 @@ QBCore = exports['qb-core']:GetCoreObject()
 
 Citizen.CreateThread(function()
     while true do
-    Citizen.Wait(1000*10)
+    Citizen.Wait(1000*60)
     local check = 'placeholder'
     local reset = MySQL.query.await('SELECT * FROM lotterytotal where lotto = ?', {check})
     local math = reset[1].day + 1
