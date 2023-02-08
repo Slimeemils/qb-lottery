@@ -7,7 +7,7 @@ Citizen.CreateThread(function()
     local reset = MySQL.query.await('SELECT * FROM lotterytotal where lotto = ?', {check})
     local math = reset[1].day + 1
     local resetday = 14
-        if os.date('%H:%M') == Config.ResetQuest then
+        if os.date('%H:%M') == Config.Reset then
             if reset[1].day ~= resetday then
                 MySQL.Async.execute("UPDATE lotterytotal SET day = '"..math.."'")
             else
