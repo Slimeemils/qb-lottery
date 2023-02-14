@@ -6,8 +6,8 @@ CREATE TABLE IF NOT EXISTS `lottery` (
  CREATE TABLE IF NOT EXISTS `lotterytotal` (
    `lotto` varchar(50) NOT NULL DEFAULT 'placeholder',
    `total` varchar(50) NOT NULL DEFAULT '0',
-   `day` tinyint(4) NOT NULL DEFAULT 1,
-   `winner` tinyint(4) DEFAULT NULL
+   `day` int(4) NOT NULL DEFAULT 1,
+   `winner` int(4) DEFAULT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
  INSERT INTO `lotterytotal` (`lotto`, `total`, `day`, `winner`) VALUES
