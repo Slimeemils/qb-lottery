@@ -14,27 +14,4 @@ Add this to your items.lua & add the image in the images folder to your inventor
 	["lotteryticket"]          = {["name"] = "lotteryticket",                  ["label"] = "Lottery Ticket", 		["weight"] = 1,  ["type"] = "item", 		["image"] = "lotteryticket.png",                  ["unique"] = true, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "Your Lottery ticket number is: "},
 
 ```
-
-You will need to inject these into your database by using a query
-
-```
-CREATE TABLE `lotterytotal` (
-	`lotto` VARCHAR(50) NOT NULL DEFAULT 'placeholder' COLLATE 'utf8_general_ci',
-	`total` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8_general_ci',
-	`day` TINYINT(4) NOT NULL DEFAULT '1',
-	`winner` TINYINT(4) NULL DEFAULT NULL
-)
-COLLATE='utf8_general_ci'
-ENGINE=InnoDB
-;
-```
-
-```
-CREATE TABLE `lottery` (
-	`cid` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci',
-	`placeholder` VARCHAR(50) NOT NULL DEFAULT 'placeholder' COLLATE 'utf8_general_ci'
-)
-COLLATE='utf8_general_ci'
-ENGINE=InnoDB
-;
-```
+Add SQL to database
